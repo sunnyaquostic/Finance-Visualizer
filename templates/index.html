@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Interest Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Compound Interest Calculator</h2>
+        <form action="/" method="POST">
+            <div class="form-control">
+                <label for="initial-deposit">Initial Deposit</label>
+                <input type="number" name="initial-deposit" id="initial-deposit" step="100" required>
+            </div>
+
+            <div class="form-control">
+                <label for="interest-rate">Interest Rate</label>
+                <input type="number" name="interest-rate" id="interest-rate" step="0.01" required>
+            </div>
+
+            <div class="form-control">
+                <label for="contribution">Contribution</label>
+                <input type="number" name="contribution" id="contribution" step="10" required>
+            </div>
+
+            <div class="form-control">
+                <label for="compound-type">Compound Type</label>
+                <select name="compound-type" id="compound-type">
+                    <option value="monthly">Monthly</option>
+                    <option value="annually">Annually</option>
+                </select>
+            </div>
+
+            <div class="form-control">
+                <label for="time-period">Time Period(years)</label>
+                <input type="number" name="time-period" id="time-period" step="1" required>
+            </div>
+
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>

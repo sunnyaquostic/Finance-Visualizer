@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container-result">
+        <h3>Calculation Results</h3>
+        <p>Final amount with Interest: ${{ final_amount|round(2) }}</p>
+        <p>Difference from contribution without interest: ${{ difference|round(2) }}</p>
+        <h4>Difference and Growth over time</h4>
+        <img src="data:image/png;base64, {{ plot_url }}" alt="chart">
+    
+        <br><br>
+        <a href="/">Back</a>
+    </div>
+</body>
+</html>
