@@ -15,10 +15,9 @@ body {
 
 .container {
     padding: 1rem;
-    border: 1px solid black;
     border-radius: 25px;
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .5),
-                -5px -5px 5px 5px rgba(0, 0, 0, .5);
+    box-shadow: 5px 5px 5px 5px rgba(255, 255, 255, 0.5),
+                -5px -5px 5px 5px rgba(255, 255, 255, 0.5);
 
 }
 

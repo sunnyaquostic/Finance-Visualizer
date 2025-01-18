@@ -1,5 +1,7 @@
 import io
 import base64
+import matplotlib
+matplotlib.use('Agg')  
 import matplotlib.pyplot as plt
 from flask import Flask, render_template, request
 
@@ -23,7 +25,8 @@ def index():
 
         final_amount_with_interest = total_amount + total_contribution
         
-        total_contribution_without_interest = init_deposit + contribution *time_period_years * n
+        total_contribution_without_interest = init_deposit + contribution * time_period_years * n
+        
         difference = final_amount_with_interest - total_contribution_without_interest
         
         
@@ -34,7 +37,7 @@ def index():
         
         for year in years:
             year_total_amount = init_deposit * (1 + interest / n) ** (n * year)
-            year_total_contribution = contribution * (((1 + interest / n) ** (n * year) -1) / (interest / n))
+            year_total_contribution = contribution * (((1 + interest / n) ** (n * year) - 1) / (interest / n))
             
             year_total_contribution_without_interest = init_deposit + contribution * year * n 
             
