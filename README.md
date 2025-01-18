@@ -47,7 +47,7 @@ Setup Instructions
 
 Clone the Repository:
 
-git clone repository-url>](https://github.com/sunnyaquostic/Finance-Visualizer
+git clone https://github.com/sunnyaquostic/Finance-Visualizer
 cd current
 
 Set Up Virtual Environment (Optional but recommended):
